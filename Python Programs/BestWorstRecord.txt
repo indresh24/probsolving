@@ -1,0 +1,24 @@
+def breakingRecords(scores):
+    maxlist=[]
+    minlist=[]
+    minscore=scores[0]
+    maxscore=scores[0]
+    maxlist.append(maxscore)
+    minlist.append(minscore)
+    for i in range(1,len(scores)):
+        if scores[i] <= minscore:
+            maxlist.append(minscore)
+        else:
+            minscore=scores[i]
+            maxlist.append(minscore)
+    for i in range(1,len(scores)):
+        if scores[i] >= maxscore:
+            minlist.append(maxscore)
+        else:
+            maxscore=scores[i]
+            minlist.append(maxscore)
+    c=[]
+    print(len(set(maxlist)))
+    c.append(len(set(maxlist))-1)
+    c.append(len(set(minlist))-1)
+    return c
