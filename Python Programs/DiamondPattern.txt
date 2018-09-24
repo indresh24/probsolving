@@ -1,0 +1,42 @@
+a=65
+ch=65
+k=20
+for i in range(0,5):
+    for l in range(0,k):
+        print(" ",end="")
+    k-=2
+    l=[' ']*10
+    ch=a
+    for j in range(0,i+1):
+        l[i-j]=l[i+j]=chr(ch)
+        ch-=1
+    print(" ".join(l))
+    a+=1
+    print("",end="")
+a-=1
+k+=2
+for i in range(4,-1,-1):
+    l=[' ']*10
+    for m in range(0,k):
+        print(" ",end="")
+    k+=2
+    ch=a
+    for j in range(0,i+1):
+        l[i-j]=l[i+j]=chr(ch)
+        ch-=1
+    print(" ".join(l))
+    a-=1
+    print("",end="")
+
+================================================================================
+output:
+              A
+            A B A
+          A B C B A
+        A B C D C B A
+      A B C D E D C B A
+      A B C D E D C B A
+        A B C D C B A
+	  A B C B A
+            A B A
+              A
