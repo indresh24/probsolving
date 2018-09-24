@@ -1,0 +1,21 @@
+a=65
+ch=65
+for i in range(0,5):
+    l=[' ']*10
+    ch=a
+    for j in range(0,i+1):
+        l[i-j]=l[i+j]=chr(ch)
+        ch-=1
+    print("".join(l))
+    a+=1
+    print("",end="")
+a-=1
+for i in range(4,-1,-1):
+    l=[' ']*10
+    ch=a
+    for j in range(0,i+1):
+        l[i-j]=l[i+j]=chr(ch)
+        ch-=1
+    print("".join(l))
+    a-=1
+    print("",end="")
